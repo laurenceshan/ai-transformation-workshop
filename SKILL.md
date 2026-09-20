@@ -113,8 +113,8 @@ user's language:
   Executive Summary figures must update in sync.
 - **Pain Point Map section**: assign every pain point an urgency level
   (e.g. Critical / High / Medium / Low — define the criteria: rate of time
-  or money bleed x proximity to revenue) and color-code on a red-to-green
-  scale, red = most urgent.
+  or money bleed x proximity to revenue), color-code on a red-to-green
+  scale (red = most urgent), and sort the list from most to least urgent.
 - **Opportunity Scorecard section**: table with use case, value score (1-5),
   feasibility score (1-5), quadrant, expected impact in money, first step.
   Sorted by priority. Include the 1-5 anchor definitions for both axes and
