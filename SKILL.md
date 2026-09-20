@@ -96,8 +96,12 @@ user's language:
 - **Layout**: fixed top navigation listing all H1-level sections; clicking a
   nav item switches the content panel below. The page itself must never show
   a vertical scrollbar (only a panel may scroll internally if its content
-  overflows). The footer must credit the source repository
-  (github.com/laurenceshan/ai-transformation-workshop) and its license.
+  overflows). The layout must be responsive: desktop first, with tablet and
+  phone breakpoints (nav may scroll horizontally, tables may scroll inside
+  their own container, multi-column blocks stack to a single column) — the
+  no-page-scroll rule holds at every viewport. The footer must credit the
+  source repository (github.com/laurenceshan/ai-transformation-workshop)
+  and its license.
 - **Sections**: Executive Summary (one-paragraph verdict + top 3
   recommendations) / Business Context / Pain Point Map / Opportunity
   Scorecard / ROI Analysis / 90-Day Action Plan / Risks & Open Questions.
