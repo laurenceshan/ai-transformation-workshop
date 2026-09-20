@@ -12,7 +12,9 @@ description: >
   user stage by stage (business context, pain points, use-case ideation,
   value x feasibility scoring, roadmap), translates every recommendation
   into money (revenue upside, cost savings, probability-weighted risk) and
-  produces an interactive HTML report with a full ROI analysis.
+  produces an interactive HTML report with a full ROI analysis, structured
+  as the six-section SCORER framework (Summary, Context & Pains,
+  Opportunities, Returns, Execution, Risks).
 ---
 
 # AI Transformation Workshop
@@ -91,36 +93,45 @@ to scope next, explicit "not now" list. Then produce the HTML report.
 ## Deliverables
 
 Produce ONE interactive HTML report (self-contained single file), in the
-user's language:
+user's language. The report's six sections form the **SCORER framework**:
 
-- **Layout**: fixed top navigation listing all H1-level sections; clicking a
-  nav item switches the content panel below. The page itself must never show
-  a vertical scrollbar (only a panel may scroll internally if its content
-  overflows). The layout must be responsive: desktop first, with tablet and
-  phone breakpoints (nav may scroll horizontally, tables may scroll inside
-  their own container, multi-column blocks stack to a single column) — the
-  no-page-scroll rule holds at every viewport. The footer must credit the
-  source repository (github.com/laurenceshan/ai-transformation-workshop)
-  and its license.
-- **Sections**: Executive Summary (one-paragraph verdict + top 3
-  recommendations) / Business Context / Pain Point Map / Opportunity
-  Scorecard / ROI Analysis / 90-Day Action Plan / Risks & Open Questions.
-- **Executive Summary section**: quote the headline ROI figures (annual net
-  benefit, ROI, payback period) with a one-line interpretation, a visible
-  disclaimer that all figures derive from estimates agreed during the
-  workshop and are not guarantees, and a link that jumps to the ROI Analysis
-  section. If the report recalculates ROI from adjustable inputs, the
-  Executive Summary figures must update in sync.
-- **Pain Point Map section**: assign every pain point an urgency level
-  (e.g. Critical / High / Medium / Low — define the criteria: rate of time
-  or money bleed x proximity to revenue), color-code on a red-to-green
-  scale (red = most urgent), and sort the list from most to least urgent.
-- **Opportunity Scorecard section**: table with use case, value score (1-5),
+| Letter | Section | Content |
+|---|---|---|
+| **S** | Summary | one-paragraph verdict + top 3 recommendations |
+| **C** | Context & Pains | business context recap merged into the pain point map |
+| **O** | Opportunities | the scored opportunity scorecard |
+| **R** | Returns | the ROI / money analysis |
+| **E** | Execution | the 90-day action plan |
+| **R** | Risks | risks and open questions |
+
+- **Layout**: fixed top navigation listing the six SCORER sections; clicking
+  a nav item switches the content panel below. The page itself must never
+  show a vertical scrollbar (only a panel may scroll internally if its
+  content overflows). The layout must be responsive: desktop first, with
+  tablet and phone breakpoints (nav may scroll horizontally, tables may
+  scroll inside their own container, multi-column blocks stack to a single
+  column) — the no-page-scroll rule holds at every viewport. The footer must
+  credit the source repository
+  (github.com/laurenceshan/ai-transformation-workshop), its license, and the
+  line "Built with the SCORER framework".
+- **Summary section**: quote the headline ROI figures (annual net benefit,
+  ROI, payback period) with a one-line interpretation, a visible disclaimer
+  that all figures derive from estimates agreed during the workshop and are
+  not guarantees, and a link that jumps to the Returns section. If the
+  report recalculates ROI from adjustable inputs, the Summary figures must
+  update in sync.
+- **Context & Pains section**: open with a compact business-context recap
+  (industry, model, size, data maturity, prior AI attempts), then the pain
+  point map. Assign every pain point an urgency level (e.g. Critical / High /
+  Medium / Low — define the criteria: rate of time or money bleed x proximity
+  to revenue), color-code on a red-to-green scale (red = most urgent), and
+  sort the list from most to least urgent.
+- **Opportunities section**: table with use case, value score (1-5),
   feasibility score (1-5), quadrant, expected impact in money, first step.
   Sorted by priority. Include the 1-5 anchor definitions for both axes and
   the quadrant definitions, and render the quadrants as a 2x2 grid showing
   where each candidate lands.
-- **ROI Analysis section** (the signature feature): follow
+- **Returns section** (the signature feature): follow
   `references/money-model.md`. Show revenue, cost, and risk as separate
   blocks with their formulas; make currency, hourly rate, hours saved, and
   risk probability user-adjustable inputs with live recalculation where the

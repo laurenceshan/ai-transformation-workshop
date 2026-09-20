@@ -12,6 +12,18 @@ the final interactive HTML report shows ROI, payback period, and a live
 calculator where the user can adjust hourly rates, hours saved, and risk
 probabilities to stress-test every assumption.
 
+## The SCORER framework
+
+Every workshop report is structured as six sections whose initials spell
+**SCORER** — because scoring opportunities is what the workshop does:
+
+- **S**ummary — verdict + top 3 recommendations, with headline ROI figures
+- **C**ontext & Pains — business baseline and the urgency-ranked pain map
+- **O**pportunities — the value x feasibility scorecard and quadrant grid
+- **R**eturns — the ROI analysis with live-adjustable assumptions
+- **E**xecution — the 90-day action plan
+- **R**isks — risks and open questions, honestly labeled
+
 ## What it does
 
 Five stages, one at a time, with a recap and confirmation at each gate:
