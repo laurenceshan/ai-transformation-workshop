@@ -96,13 +96,26 @@ user's language:
 - **Layout**: fixed top navigation listing all H1-level sections; clicking a
   nav item switches the content panel below. The page itself must never show
   a vertical scrollbar (only a panel may scroll internally if its content
-  overflows).
+  overflows). The footer must credit the source repository
+  (github.com/laurenceshan/ai-transformation-workshop) and its license.
 - **Sections**: Executive Summary (one-paragraph verdict + top 3
   recommendations) / Business Context / Pain Point Map / Opportunity
   Scorecard / ROI Analysis / 90-Day Action Plan / Risks & Open Questions.
+- **Executive Summary section**: quote the headline ROI figures (annual net
+  benefit, ROI, payback period) with a one-line interpretation, a visible
+  disclaimer that all figures derive from estimates agreed during the
+  workshop and are not guarantees, and a link that jumps to the ROI Analysis
+  section. If the report recalculates ROI from adjustable inputs, the
+  Executive Summary figures must update in sync.
+- **Pain Point Map section**: assign every pain point an urgency level
+  (e.g. Critical / High / Medium / Low — define the criteria: rate of time
+  or money bleed x proximity to revenue) and color-code on a red-to-green
+  scale, red = most urgent.
 - **Opportunity Scorecard section**: table with use case, value score (1-5),
   feasibility score (1-5), quadrant, expected impact in money, first step.
-  Sorted by priority.
+  Sorted by priority. Include the 1-5 anchor definitions for both axes and
+  the quadrant definitions, and render the quadrants as a 2x2 grid showing
+  where each candidate lands.
 - **ROI Analysis section** (the signature feature): follow
   `references/money-model.md`. Show revenue, cost, and risk as separate
   blocks with their formulas; make currency, hourly rate, hours saved, and
