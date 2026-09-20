@@ -19,6 +19,15 @@ Ask (adapt to profile):
    threads?
 5. Have you tried AI before? What happened — and why did it stall or fail?
 
+Economic baselines (required — the money model depends on them):
+
+6. Currency for all figures: default USD, but confirm and let the user
+   override.
+7. Hourly rate of the key people whose time the use cases will save (founder,
+   team leads). Ask directly; never assume silently. If the user is unsure,
+   offer anchors (market salary for the role, or their billing rate) and
+   record which basis was chosen.
+
 Facilitation tips:
 
 - If the user is vague ("we do everything"), force a choice: "If you could
@@ -44,10 +53,14 @@ For each area, ask: "Where do people spend the most repetitive hours? Where
 do mistakes or delays cost you money? What knowledge lives only in specific
 people's heads?"
 
-Quantify each pain point with concrete numbers:
+Quantify each pain point with concrete numbers, and convert hours into money
+immediately using the confirmed hourly rate:
 
-- "How many people, how many hours per week?"
+- "How many people, how many hours per week?" — then say what that is worth
+  per year in the confirmed currency.
 - "What does an error cost? How often?"
+- "What would it cost to hire someone to absorb this work instead?"
+  (fully-loaded cost + ramp time — needed for avoided-hire calculations)
 - If unknown: agree on a clearly-labeled estimate.
 
 Facilitation tips:
@@ -94,7 +107,9 @@ From the scorecard, recommend:
 - **Scope next**: 1-2 Big Bets worth a deeper feasibility study.
 - **Not now**: explicit list with one-line reasons. This list builds trust.
 
-Then assemble the two deliverables described in SKILL.md.
+Then assemble the HTML report described in SKILL.md. Before writing the ROI
+section, re-read `references/money-model.md` and confirm its baselines
+(currency, hourly rate) with the user if they were not fixed in Stage 1.
 
 ## Handling Difficult Situations
 

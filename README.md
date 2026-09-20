@@ -1,28 +1,32 @@
 # ai-transformation-workshop
 
-An open-source agent skill that turns a general-purpose AI assistant into a
-facilitator for **enterprise AI use-case discovery workshops**.
+An open-source [agent skill](https://github.com/anthropics/skills) that turns
+a general-purpose AI assistant into a facilitator for **enterprise AI use-case
+discovery workshops** — and, unlike generic advice, **puts a price tag on
+every recommendation**.
 
-Instead of answering "we should do AI" with generic advice, the skill walks
-the user through a structured five-stage interview and produces two concrete
-deliverables: a **scored opportunity scorecard** (value x feasibility) and a
-**workshop report** with a 90-day action plan.
+Its signature feature is a **quantified ROI model**: each recommended use
+case is translated into money across three dimensions — revenue upside, cost
+savings, and probability-weighted risk (expected loss, not flat cost) — and
+the final interactive HTML report shows ROI, payback period, and a live
+calculator where the user can adjust hourly rates, hours saved, and risk
+probabilities to stress-test every assumption.
 
 ## What it does
 
 Five stages, one at a time, with a recap and confirmation at each gate:
 
 1. **Business Context** — industry, business model, data/IT maturity, prior
-   AI attempts.
+   AI attempts, plus economic baselines (currency, hourly rates).
 2. **Pain Point Collection** — 5-10 pains mapped to processes, each quantified
-   in hours, error costs, or revenue at risk.
+   in hours and converted to money on the spot.
 3. **Use-Case Ideation** — pains converted into candidate use cases, seeded
    by a built-in industry scenario library.
 4. **Value x Feasibility Scoring** — anchored 1-5 scoring; feasibility is the
    weakest-link of data / technology / integration / organization. Candidates
    land in four quadrants: Quick Wins, Big Bets, Fill-ins, Money Pits.
 5. **Roadmap & Report** — 1-3 Quick Wins to start within 90 days, Big Bets to
-   scope next, and an explicit "not now" list.
+   scope next, an explicit "not now" list — and a full ROI analysis.
 
 ## Who it's for
 
@@ -33,8 +37,8 @@ Five stages, one at a time, with a recap and confirmation at each gate:
 
 ## Usage
 
-Install the skill into your agent environment (any skills-compatible
-runtime), then say something like:
+Install the skill into your agent environment (Claude Code / Kimi / any
+skills-compatible runtime), then say something like:
 
 > "Help me figure out where AI can create value in my company."
 
@@ -51,6 +55,7 @@ ai-transformation-workshop/
 └── references/
     ├── interview-playbook.md         # Per-stage question scripts & facilitation rules
     ├── scoring-rubric.md             # Value x feasibility anchors, quadrants, worked example
+    ├── money-model.md                # ROI methodology: revenue / cost / risk formulas
     ├── industry-template.md          # Template for adding industry libraries
     └── industry-retail.md            # Example library: retail & e-commerce
 ```

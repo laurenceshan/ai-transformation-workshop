@@ -10,8 +10,9 @@ description: >
   "AI roadmap", "AI readiness", "AI opportunity assessment", "prioritize AI
   projects", "数字化转型", "AI转型", "AI落地场景". The skill interviews the
   user stage by stage (business context, pain points, use-case ideation,
-  value x feasibility scoring, roadmap) and produces a scored opportunity
-  scorecard plus a workshop report.
+  value x feasibility scoring, roadmap), translates every recommendation
+  into money (revenue upside, cost savings, probability-weighted risk) and
+  produces an interactive HTML report with a full ROI analysis.
 ---
 
 # AI Transformation Workshop
@@ -55,6 +56,10 @@ current data/IT maturity, any AI attempts so far (and why they failed or
 stalled). If the user's industry matches a file in `references/` (e.g.
 `industry-retail.md`), load it now — it shapes Stages 2-3.
 
+Also collect the economic baselines (see `references/money-model.md`):
+confirm the currency (default USD, user may override), and ask the user for
+the hourly rate of key people (founder/team) — never assume it silently.
+
 ### Stage 2 — Pain Point Collection
 
 Map the value chain with the user and collect pain points: repetitive manual
@@ -81,22 +86,32 @@ classification: Quick Wins / Big Bets / Fill-ins / Money Pits.
 ### Stage 5 — Roadmap & Report
 
 Recommend a sequence: 1-3 Quick Wins to start within 90 days, 1-2 Big Bets
-to scope next, explicit "not now" list. Then produce the two deliverables.
+to scope next, explicit "not now" list. Then produce the HTML report.
 
 ## Deliverables
 
-Produce both, in the user's language:
+Produce ONE interactive HTML report (self-contained single file), in the
+user's language:
 
-1. **Opportunity Scorecard** — a markdown table: use case, value score (1-5),
-   feasibility score (1-5), quadrant, expected impact (with numbers), first
-   step. Sorted by priority.
-2. **Workshop Report** — markdown report containing: executive summary
-   (one-paragraph verdict + the top 3 recommendations), business context
-   recap, pain point map, full scorecard, quadrant analysis, 90-day action
-   plan, risks and open questions.
+- **Layout**: fixed top navigation listing all H1-level sections; clicking a
+  nav item switches the content panel below. The page itself must never show
+  a vertical scrollbar (only a panel may scroll internally if its content
+  overflows).
+- **Sections**: Executive Summary (one-paragraph verdict + top 3
+  recommendations) / Business Context / Pain Point Map / Opportunity
+  Scorecard / ROI Analysis / 90-Day Action Plan / Risks & Open Questions.
+- **Opportunity Scorecard section**: table with use case, value score (1-5),
+  feasibility score (1-5), quadrant, expected impact in money, first step.
+  Sorted by priority.
+- **ROI Analysis section** (the signature feature): follow
+  `references/money-model.md`. Show revenue, cost, and risk as separate
+  blocks with their formulas; make currency, hourly rate, hours saved, and
+  risk probability user-adjustable inputs with live recalculation where the
+  medium allows; state ROI and payback period per Quick Win and for the
+  portfolio.
 
-Save deliverables as files when the environment supports it; otherwise output
-them inline, clearly delimited.
+If the environment cannot render files, fall back to inline markdown with
+the same section structure — but the money quantification is not optional.
 
 ## Resources
 
@@ -104,6 +119,9 @@ them inline, clearly delimited.
   facilitation rules, and how to handle stuck or over-enthusiastic users.
 - `references/scoring-rubric.md` — scoring anchors for value and
   feasibility, weighting, quadrant thresholds, worked example.
+- `references/money-model.md` — the ROI methodology: currency and hourly-rate
+  baselines, revenue/cost/risk formulas, investment definition, worked
+  example, and report requirements.
 - `references/industry-template.md` — template for adding a new industry
   scenario library.
 - `references/industry-retail.md` — example library: retail & e-commerce.
