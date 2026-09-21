@@ -1,5 +1,28 @@
 ---
 name: ai-transformation-workshop
+version: 3.0.0
+display_name: AI转型工作坊
+display_name_en: AI Transformation Workshop
+description_zh: >
+  引导企业完成结构化的多阶段 AI 用例发现工作坊。当用户提出 AI 转型规划、AI 落地策略、
+  业务 AI 场景梳理、AI 项目优先级排序、AI 路线图制定或 AI 机会评估等需求时使用。
+  触发语包括："AI转型"、"数字化转型"、"AI落地场景"、"AI机会评估"、"帮我梳理AI能做什么"。
+  技能通过分阶段访谈（业务背景、痛点收集、用例构想、价值×可行性打分、路线图）进行，
+  将每一项推荐转化为财务数字（收入增长、成本节约、概率加权风险），
+  并产出包含完整 ROI 分析（保守/预期/乐观三档，保守档为头条）的交互式 HTML 报告。
+description_en: >
+  Facilitates a structured, multi-stage AI use-case discovery workshop for
+  enterprises. Use this skill whenever a user asks for help with AI
+  transformation planning, AI adoption strategy, finding/scoping AI use cases
+  for their business, prioritizing AI initiatives, building an AI roadmap, or
+  running an AI opportunity assessment. Trigger phrases include: "AI
+  transformation", "where can AI help my business", "AI use case discovery",
+  "AI roadmap", "AI readiness", "AI opportunity assessment", "prioritize AI
+  projects". The skill interviews the user stage by stage (business context,
+  pain points, use-case ideation, value x feasibility scoring, roadmap),
+  translates every recommendation into money (revenue upside, cost savings,
+  probability-weighted risk) and produces an interactive HTML report with a
+  full ROI analysis presented in three tiers (conservative headline).
 description: >
   Facilitates a structured, multi-stage AI use-case discovery workshop for
   enterprises. Use this skill whenever a user asks for help with AI
