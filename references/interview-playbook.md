@@ -4,6 +4,45 @@ Per-stage question scripts and facilitation rules. Ask questions one batch at
 a time (3-5 per message max), adapt wording to the user's profile, and always
 close a stage with a short recap + explicit confirmation before advancing.
 
+The number-confirmation protocol (see SKILL.md Core Principle 2) governs every
+question below: the facilitator never fills in a revenue, conversion, pricing,
+or headcount figure on the user's behalf.
+
+## Stage 0 — Financial Baseline
+
+Goal: the three setup confirmations from `references/financial-baseline.md`
+plus a P&L-based view of whether the business is revenue-constrained or
+cost-heavy. Run this stage first, always.
+
+Opening script (adapt to tone, keep all three confirmations):
+
+1. **Role & scope**: "Are we looking at the whole company or one department?
+   If a department, which one, and roughly what share of company spend does
+   it represent?"
+2. **Precision mode**: "Do you want a rigorous pass — we quantify each use
+   case line by line — or a rough pass — order-of-magnitude only? Either way,
+   I will not put words in your mouth: every financial figure must come from
+   you or be confirmed by you."
+3. **Attachments**: "You can upload financial material to speed this up —
+   financial statements, an annual report, management accounts, even a
+   household-style ledger for a very small business. If you have run this
+   workshop before, upload the previous report and we will verify what
+   changed instead of starting from zero."
+
+If attachments are provided: extract revenue lines and cost categories, then
+present the decomposed baseline as a table for confirmation — never proceed
+on unconfirmed extracted numbers. Deliver the verdict (revenue-constrained
+vs cost-heavy) per `financial-baseline.md`, and select the matching
+questioning mode for Stages 1-2.
+
+If the user is a returning user with a previous report: run the diff-first
+verification from `financial-baseline.md` — present changed figures, stale
+assumptions, and gaps first; confirm or correct each; then still walk the
+five stages in order.
+
+If no attachments: collect the same baseline through the Stage 1 questions
+below — slower, equally valid.
+
 ## Stage 1 — Business Context
 
 Goal: enough context to anchor every later recommendation.
@@ -36,6 +75,10 @@ Facilitation tips:
   load it before Stage 2.
 - If the user cannot answer the data question, that itself is a finding:
   record data maturity as LOW.
+- Apply the questioning mode chosen in Stage 0: labor-heavy cost structures
+  get headcount-and-hours questions; external-spend-heavy structures get
+  procurement-and-vendor questions; capex-heavy structures get depreciation
+  and utilization questions (see `financial-baseline.md`).
 
 ## Stage 2 — Pain Point Collection
 
@@ -61,7 +104,9 @@ immediately using the confirmed hourly rate:
 - "What does an error cost? How often?"
 - "What would it cost to hire someone to absorb this work instead?"
   (fully-loaded cost + ramp time — needed for avoided-hire calculations)
-- If unknown: agree on a clearly-labeled estimate.
+- If unknown: propose a clearly-labeled estimate and ask the user to confirm
+  or correct it. Unconfirmed numbers stay tagged "pending confirmation" and
+  flow into the report's Risks section.
 
 Facilitation tips:
 
@@ -92,7 +137,13 @@ Rules:
 
 ## Stage 4 — Scoring
 
-Read `scoring-rubric.md` and score each candidate on value and feasibility.
+Read `scoring-rubric.md`. Sequence matters: for each candidate, first run the
+financial estimate per `references/money-model.md` with user-confirmed inputs,
+THEN score value on the 1-5 relative anchors (share of the user's own
+revenue or cost base), then score feasibility. Never let a value score
+precede the money estimate — an unscored-by-money ranking is a known
+failure mode.
+
 Show the user the scores and rationale; let them challenge and adjust. The
 user owns the final scores.
 
@@ -121,3 +172,8 @@ section, re-read `references/money-model.md` and confirm its baselines
 - **User expects tool/vendor recommendations**: stay tool-agnostic in scoring;
   vendor selection belongs to the follow-on feasibility study of the top
   Quick Win.
+- **Returning user who wants to skip re-verification**: acknowledge the
+  previous report, then explain that businesses drift — prices change,
+  headcount changes, priorities change. Offer the diff-first path from
+  `financial-baseline.md` as the fast lane, but never skip straight to
+  re-scoring on unverified numbers.

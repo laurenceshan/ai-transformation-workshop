@@ -12,9 +12,7 @@ description: >
   user stage by stage (business context, pain points, use-case ideation,
   value x feasibility scoring, roadmap), translates every recommendation
   into money (revenue upside, cost savings, probability-weighted risk) and
-  produces an interactive HTML report with a full ROI analysis, structured
-  as the six-section SCORER framework (Summary, Context & Pains,
-  Opportunities, Returns, Execution, Risks).
+  produces an interactive HTML report with a full ROI analysis.
 ---
 
 # AI Transformation Workshop
@@ -37,9 +35,10 @@ Three user profiles — adapt depth and vocabulary accordingly:
 1. **Business first, technology second.** Every use case must attach to a
    named business process, a pain owner, and a measurable outcome. Reject
    "use LLM somewhere" answers.
-2. **Concrete numbers over abstractions.** When quantifying value, substitute
-   real figures from the user's business (headcount, ticket volume, hours).
-   If unknown, ask; if the user cannot answer, use a clearly-labeled estimate.
+2. **Numbers come from the customer.** Never invent revenue, conversion,
+   pricing, or headcount figures. Critical numbers are stated by the user;
+   secondary parameters may be proposed but must be confirmed. Every figure
+   in the final report carries a source tag: user-confirmed or pending.
 3. **One stage at a time.** Do not dump all questions at once. Finish each
    stage, summarize what was learned, get confirmation, then move on.
 4. **Language adaptive.** Conduct the interview and write all deliverables in
@@ -47,9 +46,23 @@ Three user profiles — adapt depth and vocabulary accordingly:
 
 ## Workflow
 
-Run the five stages in order. For the full question scripts and facilitation
-tips per stage, read `references/interview-playbook.md` before starting
-Stage 1.
+Run Stage 0 first, then the five stages in order. Read
+`references/financial-baseline.md` before Stage 0 and
+`references/interview-playbook.md` before Stage 1.
+
+### Stage 0 — Financial Baseline (P&L first)
+
+Three setup confirmations: role & scope (whole company vs single
+department), precision mode (rigorous vs rough — confirmation rules apply in
+both), and attachments (financial statements, annual reports, ledgers; for
+returning users, also the previous report).
+
+Then decompose the user's P&L: revenue lines vs cost categories (labor /
+external spend / capital). The deliverable is a confirmed baseline table
+plus one verdict: is the business revenue-constrained or cost-heavy?
+Adapt all later questioning to the dominant cost category (see
+`financial-baseline.md`). If no attachment is available, build the
+simplified baseline through Stage 1 Q&A instead.
 
 ### Stage 1 — Business Context
 
@@ -58,9 +71,9 @@ current data/IT maturity, any AI attempts so far (and why they failed or
 stalled). If the user's industry matches a file in `references/` (e.g.
 `industry-retail.md`), load it now — it shapes Stages 2-3.
 
-Also collect the economic baselines (see `references/money-model.md`):
-confirm the currency (default USD, user may override), and ask the user for
-the hourly rate of key people (founder/team) — never assume it silently.
+Confirm the currency for all figures (default USD, user may override). If
+Stage 0 did not already fix hourly rates of key people, ask for them here —
+never assume silently.
 
 ### Stage 2 — Pain Point Collection
 
@@ -80,15 +93,17 @@ assistance to achieve *which outcome*.
 ### Stage 4 — Value x Feasibility Scoring
 
 Score every candidate on the two axes in `references/scoring-rubric.md`
-(read it before this stage). Value: revenue impact, cost saving, time
-recovery, strategic leverage. Feasibility: data availability, technical
-maturity, integration effort, organizational readiness. Produce a 2x2
-classification: Quick Wins / Big Bets / Fill-ins / Money Pits.
+(read it before this stage). Value is scored ONLY AFTER the financial
+estimate for the candidate is complete and user-confirmed: the 1-5 anchors
+are relative to the user's own business (share of revenue or cost affected),
+not absolute thresholds. Feasibility: data availability, technical maturity,
+integration effort, organizational readiness. Produce a 2x2 classification:
+Quick Wins / Big Bets / Fill-ins / Money Pits.
 
 ### Stage 5 — Roadmap & Report
 
 Recommend a sequence: 1-3 Quick Wins to start within 90 days, 1-2 Big Bets
-to scope next, explicit "not now" list. Then produce the HTML report.
+to scope next, explicit "not now" list. Then produce the two deliverables.
 
 ## Deliverables
 
@@ -135,21 +150,27 @@ user's language. The report's six sections form the **SCORER framework**:
   `references/money-model.md`. Show revenue, cost, and risk as separate
   blocks with their formulas; make currency, hourly rate, hours saved, and
   risk probability user-adjustable inputs with live recalculation where the
-  medium allows; state ROI and payback period per Quick Win and for the
-  portfolio.
+  medium allows. Present ROI as three tiers (conservative / expected /
+  optimistic), defaulting to the conservative tier — a single optimistic
+  point estimate is a known failure mode. State ROI and payback period per
+  Quick Win and for the portfolio. Every input figure carries a source tag:
+  user-confirmed or pending confirmation.
 
 If the environment cannot render files, fall back to inline markdown with
 the same section structure — but the money quantification is not optional.
 
 ## Resources
 
+- `references/financial-baseline.md` — Stage 0 guide: role & scope, precision
+  mode, attachment intake, P&L decomposition, cost-structure-adaptive
+  questioning, returning-user verification.
 - `references/interview-playbook.md` — per-stage question scripts,
   facilitation rules, and how to handle stuck or over-enthusiastic users.
-- `references/scoring-rubric.md` — scoring anchors for value and
-  feasibility, weighting, quadrant thresholds, worked example.
-- `references/money-model.md` — the ROI methodology: currency and hourly-rate
-  baselines, revenue/cost/risk formulas, investment definition, worked
-  example, and report requirements.
+- `references/scoring-rubric.md` — scoring anchors for value (relative to
+  business size) and feasibility, quadrant thresholds, worked example.
+- `references/money-model.md` — the ROI methodology: tiered number
+  confirmation, revenue/cost/risk formulas, three-tier presentation, worked
+  example.
 - `references/industry-template.md` — template for adding a new industry
   scenario library.
 - `references/industry-retail.md` — example library: retail & e-commerce.

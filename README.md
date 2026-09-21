@@ -12,6 +12,16 @@ the final interactive HTML report shows ROI, payback period, and a live
 calculator where the user can adjust hourly rates, hours saved, and risk
 probabilities to stress-test every assumption.
 
+Two guardrails keep the numbers honest:
+
+- **Numbers come from the customer.** Revenue, conversion, pricing, and
+  headcount figures are stated by the user, never invented by the AI;
+  secondary parameters may be proposed but must be confirmed. Every figure
+  in the report carries a source tag.
+- **Three-tier ROI.** Every result is shown as conservative / expected /
+  optimistic, with the conservative tier as the headline — a single
+  optimistic point estimate is a known failure mode.
+
 ## The SCORER framework
 
 Every workshop report is structured as six sections whose initials spell
@@ -26,19 +36,30 @@ Every workshop report is structured as six sections whose initials spell
 
 ## What it does
 
-Five stages, one at a time, with a recap and confirmation at each gate:
+A Stage 0 financial baseline, then five interview stages — one at a time,
+with a recap and confirmation at each gate:
 
+0. **Financial Baseline** — role & scope (whole company vs department),
+   precision mode (rigorous vs rough), and optional upload of financial
+   material (statements, annual reports, ledgers, or a previous workshop
+   report). The skill decomposes revenue vs costs into a confirmed P&L
+   baseline and delivers one verdict: revenue-constrained or cost-heavy.
+   Returning users re-verify changed figures instead of starting over.
 1. **Business Context** — industry, business model, data/IT maturity, prior
    AI attempts, plus economic baselines (currency, hourly rates).
 2. **Pain Point Collection** — 5-10 pains mapped to processes, each quantified
-   in hours and converted to money on the spot.
+   in hours and converted to money on the spot, with questioning adapted to
+   the cost structure (labor-heavy, external-spend, or capex).
 3. **Use-Case Ideation** — pains converted into candidate use cases, seeded
    by a built-in industry scenario library.
-4. **Value x Feasibility Scoring** — anchored 1-5 scoring; feasibility is the
-   weakest-link of data / technology / integration / organization. Candidates
-   land in four quadrants: Quick Wins, Big Bets, Fill-ins, Money Pits.
+4. **Value x Feasibility Scoring** — value is scored only AFTER the financial
+   estimate, on 1-5 anchors relative to the user's own business (share of
+   revenue or cost affected); feasibility is the weakest-link of data /
+   technology / integration / organization. Candidates land in four
+   quadrants: Quick Wins, Big Bets, Fill-ins, Money Pits.
 5. **Roadmap & Report** — 1-3 Quick Wins to start within 90 days, Big Bets to
-   scope next, an explicit "not now" list — and a full ROI analysis.
+   scope next, an explicit "not now" list — and a full three-tier ROI
+   analysis.
 
 ## Who it's for
 
@@ -63,11 +84,12 @@ deliverables adapt to the user's language automatically.
 
 ```
 ai-transformation-workshop/
-├── SKILL.md                          # Core workflow (five stages)
+├── SKILL.md                          # Core workflow (Stage 0 + five stages)
 └── references/
+    ├── financial-baseline.md         # Stage 0: role & scope, precision mode, P&L decomposition
     ├── interview-playbook.md         # Per-stage question scripts & facilitation rules
-    ├── scoring-rubric.md             # Value x feasibility anchors, quadrants, worked example
-    ├── money-model.md                # ROI methodology: revenue / cost / risk formulas
+    ├── scoring-rubric.md             # Relative value anchors, feasibility, quadrants, worked example
+    ├── money-model.md                # ROI methodology: confirmation protocol, three tiers, formulas
     ├── industry-template.md          # Template for adding industry libraries
     └── industry-retail.md            # Example library: retail & e-commerce
 ```

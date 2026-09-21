@@ -5,26 +5,40 @@ Show the user each score with a one-line justification; the user may adjust.
 
 ## Axis 1 — Value (business impact if it works)
 
-| Score | Anchor |
+Value is scored ONLY AFTER the candidate's financial estimate
+(`money-model.md`) is complete and user-confirmed. Anchors are RELATIVE to
+the user's own business — the confirmed P&L baseline from Stage 0 — not
+absolute thresholds, because the same dollar figure means different things
+to a solo business and a listed company.
+
+| Score | Anchor (share of the confirmed business baseline) |
 |---|---|
-| 5 | Directly moves a top revenue driver or saves >5% of operating cost; CEO-level visibility |
-| 4 | Saves >1,000 person-hours/year or protects/creates clearly quantifiable revenue |
-| 3 | Meaningful local improvement: one team saves hundreds of hours/year or a measurable quality lift |
-| 2 | Nice-to-have efficiency gain; savings hard to attribute |
+| 5 | Moves the needle on the whole P&L: expected annual benefit is >5% of revenue, or removes a constraint the user has confirmed caps company growth |
+| 4 | Material: >1-5% of revenue or of the relevant cost category; the user confirms it would show up in year-end numbers |
+| 3 | Meaningful locally: clearly visible to one team or one budget line, but not company-level |
+| 2 | Nice-to-have: real but small relative to the business; hard to see in any report |
 | 1 | Marginal or symbolic benefit |
 
-Scoring inputs (from Stage 2 quantification): hours/week x loaded cost,
-error cost x frequency, revenue at risk, cycle-time reduction on a
-revenue-critical path. Strategic leverage (data asset creation, capability
-building) can justify +1 — applied at most once per candidate, capped at 5,
-and stated explicitly when used.
+Procedure for each candidate:
+
+1. Compute the expected annual benefit from the user-confirmed money-model
+   inputs.
+2. Express it as a share of the confirmed baseline (revenue for upside cases,
+   the relevant cost category for savings cases).
+3. Propose the score from the table AND state the importance judgment in
+   words ("this touches about 2% of your support cost — that feels like a
+   3 to me; do you agree?"). The user confirms both the share and the score.
+4. Strategic leverage (data asset creation, capability building) can justify
+   +1 — applied at most once per candidate, capped at 5, and stated
+   explicitly when used.
 
 ## Handling Estimates
 
 Any number not provided or confirmed by the user is an estimate: tag it
-(EST). Before a use case enters pilot, validate its key baselines (volumes,
-unit costs); if actuals differ materially, re-score the candidate before
-committing build resources.
+"pending confirmation" and list it in the report's Risks section. Before a
+use case enters pilot, validate its key baselines (volumes, unit costs); if
+actuals differ materially, re-score the candidate before committing build
+resources.
 
 ## Conditional Feasibility
 
@@ -65,11 +79,13 @@ listing it separately. When in doubt, classify conservatively.
 Candidate: "AI drafts first-pass replies to customer service tickets; agents
 edit and send."
 
-- Value: 120 tickets/day x 8 min saved = 16 person-hours/day saved = score 4
-- Data: 2 years of ticket history in the helpdesk system = 4
-- Technology: drafting replies is a commodity LLM capability = 5
-- Integration: helpdesk has an API; pilot needs no core-system change = 4
+- Money first: 120 tickets/day x 8 min saved = 16 person-hours/day; at the
+  user-confirmed loaded rate this is worth about 4% of the confirmed support
+  cost line. User agrees that is material -> Value 4
+- Data: 2 years of ticket history in the helpdesk system -> 4
+- Technology: drafting replies is a commodity LLM capability -> 5
+- Integration: helpdesk has an API; pilot needs no core-system change -> 4
 - Organization: agents are overloaded and asked for help; they stay in the
-  loop = 4
+  loop -> 4
 - Feasibility = min(4,5,4,4) = 4
-- Result: Value 4 x Feasibility 4 = **Quick Win**
+- Result: Value 4 x Feasibility 4 -> **Quick Win**
