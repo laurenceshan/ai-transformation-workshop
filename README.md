@@ -61,6 +61,22 @@ with a recap and confirmation at each gate:
    scope next, an explicit "not now" list — and a full three-tier ROI
    analysis.
 
+## See it in action
+
+A simulated end-to-end run: the COO of "FreshLane Market", a fictional
+28-store grocery chain, uploads her management accounts and walks through
+every stage — from the confirmed P&L baseline to a three-tier ROI portfolio
+(headline: **conservative 3.2x ROI, 2.8-month payback** on the recommended
+quick wins).
+
+![Demo workshop report — Summary panel, conservative-tier ROI headline](docs/screenshot-summary.svg)
+
+- [Full interview transcript](docs/freshlane-transcript.md) — every number
+  user-stated or user-confirmed, source tags included
+- The generated deliverable is a single self-contained interactive HTML
+  report (SCORER sections, live ROI calculator) — run a workshop to get
+  yours.
+
 ## Who it's for
 
 - **Executives / business owners** exploring where AI can actually pay off
@@ -85,6 +101,9 @@ deliverables adapt to the user's language automatically.
 ```
 ai-transformation-workshop/
 ├── SKILL.md                          # Core workflow (Stage 0 + five stages)
+├── docs/
+│   ├── screenshot-summary.svg        # Demo report screenshot (embedded above)
+│   └── freshlane-transcript.md       # Simulated end-to-end demo interview
 └── references/
     ├── financial-baseline.md         # Stage 0: role & scope, precision mode, P&L decomposition
     ├── interview-playbook.md         # Per-stage question scripts & facilitation rules
