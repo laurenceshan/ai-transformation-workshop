@@ -1,8 +1,8 @@
 ---
 name: ai-transformation-workshop
 version: 3.0.0
-display_name: AI转型机会发现
-display_name_en: AI Transformation Workshop
+display_name: SCORER AI转型机会发现
+display_name_en: SCORER AI Transformation Workshop
 description_zh: >
   通过结构化的多阶段访谈，帮助企业管理者发现 AI 降本增效的机会。
   当用户提出 AI 转型规划、AI 落地策略、业务 AI 场景梳理、AI 项目优先级排序、
