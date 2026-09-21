@@ -22,6 +22,24 @@ Two guardrails keep the numbers honest:
   optimistic, with the conservative tier as the headline — a single
   optimistic point estimate is a known failure mode.
 
+## Try it in 5 minutes
+
+Pair the skill with a company's financial report and get a structured
+insight & diagnosis of that business in one sitting. Just say:
+
+> "I want to find out where AI can create value in this company. Here is
+> its latest financial report — run the AI Transformation Workshop with me."
+
+Any financial material works: management accounts, an annual report, a
+business ledger. From it you'll learn whether the company is
+revenue-constrained or cost-heavy, get an urgency-ranked pain map, and see
+AI opportunities with three-tier ROI attached — every figure confirmed by
+you along the way.
+
+**If this skill helps you, please share it with an enterprise manager or an
+AI-transformation consultant you know** — that's the best way to support
+the project.
+
 ## The SCORER framework
 
 Every workshop report is structured as six sections whose initials spell
